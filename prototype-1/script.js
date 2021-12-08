@@ -1,0 +1,27 @@
+// Declaration variables
+
+
+
+
+
+
+
+
+
+
+// Saisir
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Sortie

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="Interface de gestion des ouvrages" />
+    <title>Gestion des ouvrages</title>
+    <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
+    <link href="css/styles.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous">
+    </script>
+</head>
+
+<body class="sb-nav-fixed">
+    <div id="layoutSidenav">
+        <div id="layoutSidenav_content">
+            <main>
+                <div >
+                    <h1 >Ouvrages</h1>
+
+                     
+                        <div>
+
+                            <form  onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
+                                <div class="col-md-6">
+                                    <label for="inputTitle" >Title</label>
+                                    <input type="text"  id="inputTitle">
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="inputAuthor" >Auteur</label>
+                                    <input type="text" id="inputAuthor">
+                                </div>
+                                <div class="col-12">
+                                    <label for="inputPrix" >Prix</label>
+                                    <input type="number" id="inputPrix">
+                                </div>
+                                <div class="col-12">
+                                    <label for="inputDate">Date de </label>
+                                    <input type="date" id="inputDate">
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="inputLanguage">Langue</label>
+                                    <select id="inputLanguage">
+                                        <option value="" disabled selected>choisir...</option>
+                                        <option value="français">Français</option>
+                                        <option value="anglais">Anglais</option>
+                                        <option value="arabe">Arabe</option>
+                                    </select>
+                                </div>
+                                <div class="col-12">
+                                    <label for="type" class="form-label">Type</label>
+                                    <div>
+                                        <input value="Roman" name="type" type="radio" id="gridCheck">
+                                        <label for="gridCheck">
+                                            Tanger
+                                        </label>
+                                    </div>
+                                    <div>
+                                        <input value="Essai" name="type" type="radio" id="gridCheck">
+                                        <label  for="gridCheck">
+                                            Tetouan
+                                        </label>
+                                    </div>
+
+                                    <div>
+                                        <input  name="type" value="Bande-Dessinée" type="radio" id="gridCheck">
+                                        <label  for="gridCheck">
+                                            Houssima
+                                        </label>
+                                    </div>
+
+                                </div>
+                                <div>
+                                    <button  type="submit">Ajouter</button>
+                                </div>
+                            </form>
+
+                        </div>
+                    <div class="card mb-4">
+                        
+                        <div class="card-body">
+                            <table class="table" id="table">
+                                <thead>
+                                    <tr>
+                                        <th>Titre</th>
+                                        <th>Auteur</th>
+                                        <th>Prix</th>
+                                        <th>Date de publication</th>
+                                        <th>Langue</th>
+                                        <th>Type</th>
+                                    </tr>
+                                </thead>
+
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
