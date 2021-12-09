@@ -30,11 +30,11 @@ function readwork() {
 
     var work = {};
     work.title = document.getElementById("inputTitle").value;
-    work["author"] = document.getElementById("inputAuthor").value;
-    work["price"] = parseFloat(document.getElementById("inputPrix").value);
-    work["date"] = document.getElementById("inputDate").value;
-    work["language"] = document.getElementById("inputLanguage").value;
-    work["type"] = document.querySelector('input[name="workType"]:checked').value
+    work.author = document.getElementById("inputAuthor").value;
+    work.price = parseFloat(document.getElementById("inputPrix").value);
+    work.date = document.getElementById("inputDate").value;
+    work.language = document.getElementById("inputLanguage").value;
+    work.type = document.querySelector('input[name="workType"]:checked').value
     return work;
 }
 
