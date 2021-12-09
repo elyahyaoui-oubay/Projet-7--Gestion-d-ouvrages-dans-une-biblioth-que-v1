@@ -8,7 +8,7 @@
         <meta name="author" content="El Yahyaoui Oubay" />
         <title>Gestion des ouvrages</title>
         <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
-        <link href="styles.css" rel="stylesheet" />
+        <link href="style.css" rel="stylesheet" />
     </head>
     
     <body class="sb-nav-fixed">
@@ -54,27 +54,27 @@
                                <i class="fas fa-book me-1"></i>
                               
 
-                                <form class="row col-lg-12">
+                                <form class="row col-lg-12" id="formSubmit">
                                     <div class="col-md-6">
                                       <label for="Titre" class="form-label">Titre</label>
-                                      <input type="text" class="form-control" id="inputEmail4">
+                                      <input type="text" class="form-control" id="inputTitle">
                                     </div>
                                     <div class="col-md-6">
                                       <label for="inputauteur" class="form-label">Auteur</label>
-                                      <input type="text" class="form-control" id="inputPassword4">
+                                      <input type="text" class="form-control" id="inputAuthor">
                                     </div>
                                     <div class="col-12">
                                       <label for="inputprix" class="form-label">Prix $</label>
-                                      <input type="number" class="form-control" id="inputAddress" placeholder="00.00$">
+                                      <input type="number" class="form-control" id="inputPrix" placeholder="00.00$">
                                     </div>
                                     <div class="col-12">
                                       <label for="inputAddress2" class="form-label">date de publication</label>
-                                      <input type="date" class="form-control" id="inputAddress2" placeholder="01/01/2021">
+                                      <input type="date" class="form-control" id="inputDate" placeholder="01/01/2021">
                                     </div>
                                     
                                     <div class="col-md-6">
                                       <label for="inputState" class="form-label">langue</label>
-                                      <select id="inputState" class="form-select">
+                                      <select id="inputLanguage" class="form-select">
                                         <option selected>Choose...</option>
                                         <option>Arab</option>
                                         <option>Français</option>
@@ -83,7 +83,29 @@
 
                                       </select>
                                     </div>
-                                    
+                                    <div class="col-12">
+                                        <label for="workType" class="form-label">Type</label>
+                                        <div>
+                                            <input value="Roman" name="workType" type="radio" id="gridCheck">
+                                            <label for="gridCheck">
+                                                Roman
+                                            </label>
+                                        </div>
+                                        <div>
+                                            <input value="Essai" name="workType" type="radio" id="gridCheck">
+                                            <label  for="gridCheck">
+                                                Essai
+                                            </label>
+                                        </div>
+    
+                                        <div>
+                                            <input  name="workType" value="Bande-Dessinée" type="radio" id="gridCheck">
+                                            <label  for="gridCheck">
+                                                Bande-Dessinée
+                                            </label>
+                                        </div>
+    
+                                    </div>
                                     <div class="col-12">
                                       <div class="form-check">
                                         <input class="form-check-input" type="checkbox" id="gridCheck">
@@ -93,7 +115,7 @@
                                       </div>
                                     </div>
                                     <div class="col-12">
-                                      <button type="submit" class="btn btn-primary">Ajouter</button>
+                                      <button id="submitButton" type="submit" class="btn btn-primary">Ajouter</button>
                                     </div>
                                   </form>
                             </div>
@@ -107,15 +129,15 @@
                                 Tableau
                             </div>
                             <div class="card-body">
-                                <table class="table">
+                                <table class="table" id="worksTable">
                                     <thead>
                                         <tr>
                                             <th>Titre</th>
                                             <th>Auteur</th>
                                             <th>Prix $</th>
                                             <th>Date de publication </th>
+                                            <th>Langue</th>
                                             <th>type</th>
-                                            
                                             <th>Actions</th>
                                             
                                         </tr>
@@ -127,8 +149,8 @@
                                             <td>Auteur 1</td>
                                             <td>100</td>
                                             <td>01/02/1999</td>
-                                            
                                             <td>Anglais</td>
+                                            <td>Roman</td>
                                             <th>
                                                 <button class="btn btn-primary">Modifie</button>
                                                 <button class="btn btn-secondary">Supprimer</button>
@@ -139,8 +161,8 @@
                                             <td>Auteur 2</td>
                                             <td>200</td>
                                             <td>01/02/1999</td>
-                                            
                                             <td>Anglais</td>
+                                            <td>Roman</td>
                                             <th>
                                                 <button class="btn btn-primary">Modifie</button>
                                                 <button class="btn btn-secondary">Supprimer</button>
@@ -151,8 +173,8 @@
                                             <td>Auteur 2</td>
                                             <td>200</td>
                                             <td>01/02/1999</td>
-                                            
                                             <td>Anglais</td>
+                                            <td>Roman</td>
                                             <th>
                                                 <button class="btn btn-primary">Modifie</button>
                                                 <button class="btn btn-secondary">Supprimer</button>
@@ -163,8 +185,8 @@
                                             <td>Auteur 2</td>
                                             <td>200</td>
                                             <td>01/02/1999</td>
-                                            
                                             <td>Anglais</td>
+                                            <td>Roman</td>
                                             <th>
                                                 <button class="btn btn-primary">Modifie</button>
                                                 <button class="btn btn-secondary">Supprimer</button>
@@ -187,6 +209,6 @@
                 </footer>
             </div>
         </div>
-        
+        <script src="script.js"></script>
     </body>
 </html>
