@@ -52,18 +52,18 @@ function insertNewRow(work) {
     var editButton = document.createElement("button")
     var deleteButton = document.createElement("button")
 
-    var editContent = document.createTextNode("Edit")
-    editButton.appendChild(editContent)
+    var editContent = document.createTextNode("Modifier")
+    editButton.appendChild(editContent);
     editButton.className = "btn btn-primary"
     editButton.setAttribute('onclick', 'onEdit(this)')
 
-    var deleteContent = document.createTextNode('Delete')
+    var deleteContent = document.createTextNode('Supprimer')
     deleteButton.appendChild(deleteContent)
     deleteButton.className = "btn btn-secondary"
     deleteButton.setAttribute("onclick", 'onDelete(this)')
 
-    cell7.appendChild(editButton)
-    cell7.appendChild(deleteButton)
+    cell7.appendChild(editButton);
+    cell7.appendChild(deleteButton);
 
 }
 
