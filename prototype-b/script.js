@@ -24,7 +24,7 @@ function resetForm() {
     selectedRow = null;
 }
 
-var onEditButton = document.getElemen
+var onEditButton = document.getElement
 
 function readwork() {
 
