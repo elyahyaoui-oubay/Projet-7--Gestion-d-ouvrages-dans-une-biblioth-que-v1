@@ -53,9 +53,11 @@
                         <div class="card mb-4">
                             <div class="card-header">
                                <i class="fas fa-book me-1"></i>
-                              
-
-                                <form class="row col-lg-12" id="formSubmit">
+                                <div class="nv-b">
+                                    <button onclick="show(this)">Nouveau</button>
+                                </div>
+                                <form  class="row col-lg-12" id="formSubmit">
+                                    
                                     <div class="col-md-12">
                                       <label for="Titre" class="form-label">Titre</label>
                                       <input type="text" class="form-control" id="inputTitle">
@@ -107,14 +109,7 @@
                                         </div>
     
                                     </div>
-                                    <div class="col-12">
-                                      <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" id="gridCheck">
-                                        <label class="form-check-label" for="gridCheck">
-                                          Check me out
-                                        </label>
-                                      </div>
-                                    </div>
+                                    
                                     <div class="col-12">
                                       <button id="submitButton" type="submit" class="btn btn-primary">Ajouter</button>
                                     </div>

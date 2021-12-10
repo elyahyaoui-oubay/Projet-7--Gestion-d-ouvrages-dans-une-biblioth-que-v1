@@ -5,10 +5,11 @@ document.getElementById("formSubmit").addEventListener("submit", function (event
         var work = readwork();
         if (selectedRow == null)
             insertNewRow(work);
-        else
+        else{
         if (confirm("Êtes-vous sûr pour modifier ?"))
             editRow(work)
         resetForm();
+        }
     } else {
         alert("S'il-vous-plaît remplissez tous les champs requis")
     }
@@ -23,8 +24,6 @@ function resetForm() {
     document.querySelector('input[name="workType"]:checked').checked = false
     selectedRow = null;
 }
-
-var onEditButton = document.getElement
 
 function readwork() {
 
@@ -122,3 +121,9 @@ function validate() {
     }  
     return isValid;
 }   
+
+function show(){
+
+    document.querySelector("#formSubmit").style.display = "flex";
+    
+}

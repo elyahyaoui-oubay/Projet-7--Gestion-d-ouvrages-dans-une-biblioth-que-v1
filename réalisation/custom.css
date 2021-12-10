@@ -9,3 +9,8 @@
 .sb-sidenav-footer{
     background-color: #6c757d !important;
 }
+
+#formSubmit {
+
+    display: none;
+}
