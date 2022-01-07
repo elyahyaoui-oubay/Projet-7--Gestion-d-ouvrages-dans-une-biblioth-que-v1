@@ -1,9 +1,10 @@
+// Declaration des variables
 var work = new Work();
 var workBLO = new WorkBLO();
 
 
 
-
+// Entreé
 document.getElementById("formulEnvoyer").addEventListener("submit", function (event) {
     event.preventDefault();
     readwork()
