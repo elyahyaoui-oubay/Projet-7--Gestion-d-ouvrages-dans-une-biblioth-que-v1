@@ -20,7 +20,7 @@ function readwork() {
 }
 
 
-
+// Afficher
 function insertNewRow(work) {
     var tableBody = document.getElementById("travauxTable").getElementsByTagName('tbody')[0];
     var newRow = tableBody.insertRow(tableBody.length);
@@ -28,6 +28,4 @@ function insertNewRow(work) {
     cell2 = newRow.insertCell(1);
     cell2.innerHTML = work.title;
  
-
-
 }
