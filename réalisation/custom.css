@@ -34,11 +34,30 @@
 }
 
 #afficheButtons{
-    border: solid;
-    background-color: grey;
+    
+    background-color: #2b8638;
     padding: 0.375rem 0.75rem;
     font-size: 1rem;
     border-radius: 0.25rem;
 }
 
+.nouveau-a{
+    text-align: center;
+    text-decoration: white;
+}
 
+.logged{
+    text-decoration: white;
+}
+
+#print{
+    background-color: #2b8638;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    border-radius: 0.25rem;
+    
+}
+
+.print-a{
+    text-decoration: white;
+}
