@@ -33,6 +33,10 @@
     border-radius: 0.25rem;
 }
 
+.submitButton-a{
+text-decoration: #fff;
+}
+
 #afficheButtons{
     
     background-color: #2b8638;
