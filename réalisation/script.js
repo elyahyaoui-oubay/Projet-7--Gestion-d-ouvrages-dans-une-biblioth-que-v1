@@ -30,6 +30,7 @@ document.getElementById("soumettreFormul").addEventListener("submit", function (
 function resetForm() {
     document.getElementById("titreEntrée").value = "";
     document.getElementById("auteurEntrée").value = "";
+    document.getElementById("emailAuteur").value = "";
     document.getElementById("prix").value = "";
     document.getElementById("dateEntrée").value = "";
     document.getElementById("langue").value = "";
@@ -44,6 +45,7 @@ function readwork() {
     
     work.title = document.getElementById("titreEntrée").value;
     work["author"] = document.getElementById("auteurEntrée").value;
+    work["email"] = document.getElementById("emailAuteur").value;
     work["price"] = parseFloat(document.getElementById("prix").value);
     work["date"] = document.getElementById("dateEntrée").value;
     work["language"] = document.getElementById("langue").value;
@@ -72,22 +74,26 @@ function insertNewRow() {
         cell3.className = "d-none d-lg-table-cell"
 
         cell4 = newRow.insertCell(3);
-        cell4.innerHTML = workList[i].price;
+        cell4.innerHTML = workList[i].email;
         cell4.className = "d-none d-lg-table-cell"
 
         cell5 = newRow.insertCell(4);
-        cell5.innerHTML = workList[i].date;
+        cell5.innerHTML = workList[i].price;
         cell5.className = "d-none d-lg-table-cell"
 
         cell6 = newRow.insertCell(5);
-        cell6.innerHTML = workList[i].language
+        cell6.innerHTML = workList[i].date;
+        cell6.className = "d-none d-lg-table-cell"
 
-        cell7 = newRow.insertCell(6)
-        cell7.innerHTML = workList[i].type
-        cell7.className = "d-none d-lg-table-cell"
-
+        cell7 = newRow.insertCell(6);
+        cell7.innerHTML = workList[i].language
 
         cell8 = newRow.insertCell(7)
+        cell8.innerHTML = workList[i].type
+        cell8.className = "d-none d-lg-table-cell"
+
+
+        cell9 = newRow.insertCell(8)
 
         var editButton = document.createElement("button")
         var deleteButton = document.createElement("button")
@@ -102,8 +108,8 @@ function insertNewRow() {
         deleteButton.className = "btn btn-secondary-custom"
         deleteButton.setAttribute("onclick", 'onDelete(this)')
 
-        cell8.appendChild(editButton)
-        cell8.appendChild(deleteButton)
+        cell9.appendChild(editButton)
+        cell9.appendChild(deleteButton)
     }
     
 }
@@ -116,6 +122,7 @@ function onEdit(buttonReference) {
     work = workManager.getItem(rowId)
     document.getElementById("titreEntrée").value = work.title;
     document.getElementById("auteurEntrée").value = work.author;
+    document.getElementById("emailAuteur").value = work.email;
     document.getElementById("prix").value = work.price;
     document.getElementById("dateEntrée").value = work.date;
     document.getElementById("langue").value = work.language;

@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="Interface de gestion des ouvrages" />
     <meta name="author" content="ESSARRAJ Fouad" />
-    <title>📘Gestion des ouvrages</title>
+    <title>Gestion des ouvrages</title>
     <link href="styles.css" rel="stylesheet" />
     <link rel="stylesheet" href="custom.css">
 </head>
@@ -15,7 +15,7 @@
 <body class="sb-nav-fixed">
     <nav class="sb-topnav navbar navbar-expand  ">
         <!-- Navbar Brand-->
-        <a class="navbar-brand ps-3" href="index.html">Gestion d'ouvrages v1</a>
+        <a class="navbar-brand ps-3" href="index.html">Gestion d'ouvrages </a>
         <!-- Sidebar Toggle-->
         <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i
                 class="fas fa-bars"></i></button>
@@ -56,9 +56,13 @@
                                     <label for="titreEntrée" class="form-label">Titre</label>
                                     <input required type="text" maxlength="30" class="form-control" id="titreEntrée">
                                 </div>
-                                <div class="col-md-12">
+                                <div class="col-md-6">
                                     <label for="auteurEntrée" class="form-label">Auteur</label>
                                     <input required type="text" class="form-control" maxlength="30" id="auteurEntrée">
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="emailAuteur" class="form-label">Email de auteur</label>
+                                    <input required type="text" class="form-control" maxlength="30" id="emailAuteur">
                                 </div>
                                 <div class="col-6">
                                     <label for="prix" class="form-label">Prix</label>
@@ -74,7 +78,7 @@
                                     <select required id="langue" class="form-select">
                                         <option value="" disabled selected>choisir...</option>
                                         <option value="français">Français</option>
-                                        <option value="français">Espagnole</option>
+                                        <option value="espagnole">Espagnole</option>
                                         <option value="anglais">Anglais</option>
                                         <option value="arabe">Arabe</option>
                                     </select>
@@ -124,6 +128,7 @@
                                         <th>ID</th>
                                         <th>Titre</th>
                                         <th class="d-none d-lg-table-cell">Auteur</th>
+                                        <th class="d-none d-lg-table-cell">Email de auteur</th>
                                         <th class="d-none d-lg-table-cell">Prix</th>
                                         <th class="d-none d-lg-table-cell">Date de publication</th>
                                         <th>Langue</th>

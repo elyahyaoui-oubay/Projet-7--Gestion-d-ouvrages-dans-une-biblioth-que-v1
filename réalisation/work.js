@@ -2,6 +2,7 @@ class Work {
     id;
     title;
     author;
+    email;
     price;
     date;
     language;
